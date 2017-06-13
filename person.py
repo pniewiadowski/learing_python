@@ -34,3 +34,4 @@ if __name__ == '__main__':
     for obj in (bob, sue, tom):
         obj.giveRasie(.10)
         print(obj)
+        
