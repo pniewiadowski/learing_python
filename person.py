@@ -10,14 +10,27 @@ class Person:
     def giveRasie(self, percent):
         self.pay = int(self.pay * (1 + percent))
 
+    def __repr__(self):
+        return '[Person: %s %s]' % (self.name, self.pay)
+
+class Manager(Person):
+    def giveRasie(self, percent, bonus=.10):
+        Person.giveRasie(self, percent+bonus)
 
 if __name__ == '__main__':
     # slef-test code
     bob = Person('Bob Smith')
     sue = Person('Sue Jons', job='dev', pay=100000)
-    print(bob.name, bob.pay)
-    print(sue.name, sue.job, sue.pay)
+    print(bob)
+    print(sue)
     print(bob.lastName(), sue.lastName())
     sue.giveRasie(.10)
-    print(sue.pay)
     print(sue)
+    tom = Manager('Tom Jones', 'mgr', 50000)
+    tom.giveRasie(.10)
+    print(tom.lastName())
+    print(tom)
+    print('--All there--')
+    for obj in (bob, sue, tom):
+        obj.giveRasie(.10)
+        print(obj)
