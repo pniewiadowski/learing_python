@@ -1,4 +1,6 @@
-class Person:
+from classtools import AttrDisplay
+
+class Person(AttrDisplay):
     def __init__(self, name, job=None, pay=0):
         self.name = name
         self.job = job
@@ -10,8 +12,8 @@ class Person:
     def giveRasie(self, percent):
         self.pay = int(self.pay * (1 + percent))
 
-    def __repr__(self):
-        return '[Person: %s %s]' % (self.name, self.pay)
+    # def __repr__(self):
+    #     return '[Person: %s %s]' % (self.name, self.pay)
 
 class Manager(Person):
     def __init__(self, name, pay):
