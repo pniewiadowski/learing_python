@@ -9,7 +9,7 @@ class Person(AttrDisplay):
     def lastName(self):
         return self.name.split()[-1]
 
-    def giveRasie(self, percent):
+    def giveRaise(self, percent):
         self.pay = int(self.pay * (1 + percent))
 
     # def __repr__(self):
