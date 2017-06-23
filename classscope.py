@@ -1,6 +1,7 @@
 x = 1
 
 def nester():
+    x=2
     print(x)
     class C:
         print(x)
