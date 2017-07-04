@@ -60,3 +60,12 @@ class Commuter5:
 
     def __str__(self):
         return '<Commuter5: %s' % self.val
+
+if __name__ == '__main__':
+    for klass in (Commuter1, Commuter2, Commuter3, Commuter4, Commuter5):
+        print('-'*60)
+        x=klass(88)
+        y=klass(99)
+        print(x+1)
+        print(1+y)
+        print(x+y)
