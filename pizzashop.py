@@ -1,16 +1,21 @@
 from employees import PizzaRobot, Server
 
+
 class Customer:
     def __init__(self, name):
         self.name = name
+
     def order(self, server):
         print(self.name, 'orders from', server)
+
     def pay(self, server):
         print(self.name, 'pays for item to', server)
+
 
 class Oven:
     def bake(self):
         print('oven bakes')
+
 
 class PizzaShop:
     def __init__(self):
@@ -24,6 +29,7 @@ class PizzaShop:
         self.chef.work()
         self.oven.bake()
         customer.pay(self.server)
+
 
 if __name__ == '__main__':
     scene = PizzaShop()
