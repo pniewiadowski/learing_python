@@ -56,7 +56,7 @@ class Commuter5:
         return Commuter5(self.val + other)
 
     def __radd__(self, other):
-        return Commuter5(other, self.val)
+        return Commuter5(other + self.val)
 
     def __str__(self):
         return '<Commuter5: %s' % self.val
