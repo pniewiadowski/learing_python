@@ -45,6 +45,6 @@ if __name__ == '__main__':
     print(bob)
     print()
 
-    for klass in Employee, Chef, PizzaRobot:
+    for klass in Employee, Chef, Server, PizzaRobot:
         obj = klass(klass.__name__)
         obj.work()
