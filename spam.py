@@ -1,5 +1,5 @@
-def printNumInstaces():
-    print('Number of instances created: %s' % Spam.numInstaces)
+def printNumInstances():
+    print('Number of instances created: %s' % Spam.numInstances)
 
 
 class Spam:
