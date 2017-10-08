@@ -1,0 +1,97 @@
+<Instance of MyButton, address 59578912:
+
+....<Class MyButton, address 42701432:
+     __doc__
+     __module__
+
+........<Class ListTree, address 53236472:
+         __dict__
+         __doc__
+         __module__
+         __str__
+         __weakref__
+
+............<Class object, address 498869696:
+             __class__
+             __delattr__
+             __dir__
+             __doc__
+             __eq__
+             __format__
+             __ge__
+             __getattribute__
+             __gt__
+             __hash__
+             __init__
+             __init_subclass__
+             __le__
+             __lt__
+             __ne__
+             __new__
+             __reduce__
+             __reduce_ex__
+             __repr__
+             __setattr__
+             __sizeof__
+             __str__
+             __subclasshook__
+............>
+........>
+
+........<Class Button, address 53194936:
+         __doc__
+         __init__
+         __module__
+
+............<Class Widget, address 53193048:
+             __doc__
+             __module__
+
+................<Class BaseWidget, address 53192104:
+                 __doc__
+                 __init__
+                 __module__
+
+....................<Class Misc, address 53176056:
+                     __dict__
+                     __doc__
+                     __getitem__
+                     __module__
+                     __repr__
+                     __setitem__
+                     __str__
+                     __weakref__
+
+........................<Class object:, address 498869696: (see above)>
+....................>
+................>
+
+................<Class Pack, address 53189272:
+                 __dict__
+                 __doc__
+                 __module__
+                 __weakref__
+
+....................<Class object:, address 498869696: (see above)>
+................>
+
+................<Class Place, address 53190216:
+                 __dict__
+                 __doc__
+                 __module__
+                 __weakref__
+
+....................<Class object:, address 498869696: (see above)>
+................>
+
+................<Class Grid, address 53191160:
+                 __dict__
+                 __doc__
+                 __module__
+                 __weakref__
+
+....................<Class object:, address 498869696: (see above)>
+................>
+............>
+........>
+....>
