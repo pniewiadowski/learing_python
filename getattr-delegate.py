@@ -21,11 +21,17 @@ class Manager:
     def giveRaise(self, percent, bonus=.10):
         self.person.giveRaise(percent + bonus)
 
-    def __getattr__(self, item):
-        return getattr(self.person, item)
+    def __getattribute__(self, item):
+        print('**', item)
+        person = object.__getattribute__(self, 'person')
+        if item == 'giveRaise':
+            return lambda percent: person.giveRaise(percent + .10)
+        else:
+            return getattr(person, item)
 
     def __repr__(self):
-        return str(self.person)
+        person = object.__getattribute__(self, 'person')
+        return str(person)
 
 
 if __name__ == '__main__':
