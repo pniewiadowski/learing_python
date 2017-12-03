@@ -6,7 +6,6 @@ def tracer(func):
         calls += 1
         print('call {} to {}'.format(calls, func.__name__))
         return func(*args, **kwargs)
-
     return wrapper
 
 
