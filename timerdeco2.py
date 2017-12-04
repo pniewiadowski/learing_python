@@ -13,9 +13,9 @@ def timer(label='', trace=True):
             elapsed = time.clock() - start
             self.alltime += elapsed
             if trace:
-                format = '{} {}: {:5f}, {:5f}'
-                values = (label, self.func.__name__, elapsed, self.alltime)
-                print(format.format(values))
+                #format = '{} {}: {:5f}, {:5f}'
+                #values = (label, self.func.__name__, elapsed, self.alltime)
+                print('{} {}: {:5f}, {:5f}'.format(label, self.func.__name__, elapsed, self.alltime))
             return result
 
     return Timer
