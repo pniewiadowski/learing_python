@@ -1,7 +1,7 @@
 trace = True
 
 
-def rangtest(**argchecks):
+def rangetest(**argchecks):
     def onDecorator(func):
         if not __debug__:
             return func
@@ -20,16 +20,16 @@ def rangtest(**argchecks):
                             errmsg = '{0} argument "{1}" not in {2}..{3}'
                             errmsg = errmsg.format(funcname, argname, low, high)
                             raise TypeError(errmsg)
-                        elif argname in positionals:
-                            position = positionals.index(argname)
-                            if pargs[position] < low or pargs[position] > high:
-                                errmsg = '{0} argument "{1}" no tin {2}..{3}'
-                                errmsg = errmsg.format(funcname, argname, low, high)
-                                raise TypeError(errmsg)
-                        else:
-                            if trace:
-                                print('Argument "{0}" defaulted'.format(argname))
-                    return func(*pargs, **kargs)
-                return onCall
+                    elif argname in positionals:
+                        position = positionals.index(argname)
+                        if pargs[position] < low or pargs[position] > high:
+                            errmsg = '{0} argument "{1}" not in {2}..{3}'
+                            errmsg = errmsg.format(funcname, argname, low, high)
+                            raise TypeError(errmsg)
+                    else:
+                        if trace:
+                            print('Argument "{0}" defaulted'.format(argname))
+                return func(*pargs, **kargs)
+        return onCall
 
-            return onDecorator
+    return onDecorator
