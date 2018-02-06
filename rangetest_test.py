@@ -18,7 +18,7 @@ birthday(5, D=1, Y=1963)
 
 # persinfo('Bob', 150)
 # persinfo(age=150, name='Bob')
-# birthday(5, D=40, Y=1963)
+# birt0hday(5, D=40, Y=1963)
 
 class Person:
     def __init__(self, name, job, pay):
